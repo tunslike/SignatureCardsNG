@@ -1,0 +1,710 @@
+.header-area-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #111;
+    padding: 1rem 10px;
+    border-bottom-color: #3f3622;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.header-area-mobile img {
+    width: 130px;
+}
+
+.cart img {
+    width: 1.6rem;
+    margin-top: -2rem;
+}
+
+.swiper-mobile-box img {
+    width: 300px;
+    height: 100%;
+}
+
+.swiper-pagination-bullet-active {
+    color: var(--primaryGold);
+}
+
+.collection-swiper-mobile {
+    padding-bottom: 3%;
+    padding: 1rem 1rem;
+    margin-left: 1.5rem;
+}
+
+.collection-swiper-mobile img {
+    width: 300px;
+    height: 100%;
+}
+
+.swiper_2 {
+    margin-left: 2.5rem;
+}
+
+.swiper-mobile-box h5 {
+    font-size: 2rem;
+}
+
+.swiper_2 a {
+    text-decoration: none;
+}
+
+.menu-mobile .active {
+    color: #fff;
+}
+
+.menu-mobile {
+    background-color: var(--darkBG);
+    margin-top: -16px;
+    display: none;
+}
+
+.menu-mobile ul {
+    list-style-type: none;
+    margin-left: -40px;
+}
+
+.menu-mobile li a {
+    text-decoration: none;
+    color: var(--lightGold);
+}
+
+.menu-mobile li {
+    line-height: 2rem;
+    border-bottom-color: #1a1919;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    text-align: center;
+}
+
+.nav-area {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.mobile-menu img {
+    width: 1.8rem;
+    margin-top: 10px;
+}
+
+.notify-badge-mobile{
+    position: relative;
+    color: #fff;
+    background-color: var(--primaryGold);
+    border-radius: 50%;
+    font-family: "Roboto";
+    font-size: 0.8rem;
+    
+    /* Alignment */
+    line-height: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    right: -43px;
+    top: -20px;
+    
+    /* Adjust as required: */
+    padding: 7px;
+}
+
+/* Height = width */
+.notify-badge-mobile::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .display-mobile {
+    height: 15rem;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: right;
+    background-color: var(--headBG);
+    background-image: url("http://localhost/signaturecards/public/img/slider/slide_1.png");
+    padding: 2.5rem 0px;
+    text-align: center;
+    margin-top: -16px;
+  }
+
+  .display-title-mobile h1 {
+    color: #fff;
+    font-size: 1.3rem;
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  .display-title-mobile h2 {
+    background: linear-gradient(to bottom, var(--primaryGold), var(--lightGold));
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 800;
+    margin-top: 0.5rem;
+}
+
+.display-title-mobile h5 {
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    width: 80%;
+    margin-top: 1rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.design-btn-mobile {
+    background-color: var(--primaryGold);
+     color: #fff;
+     font-size: 0.9rem;
+     font-weight: 700;
+     border-radius: 0.8rem;
+     padding: 1rem 2.3rem;
+
+ }
+
+ .button-holder-mobile {
+    margin-top: 2.3rem;
+ }
+
+ .button-holder-mobile a {
+    text-decoration: none;
+ }
+
+ .luxury-design-area-mobile {
+    background-color: #020B12;
+    padding: 3rem 0px;
+}
+
+.luxury-design-area-mobile h1 {
+    background: linear-gradient(to bottom, var(--primaryGold), var(--lightGold));
+    background-clip: text;
+    color: transparent;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.luxury-design-area-mobile h5 {
+    color: var(--lightGold);
+    font-size: 0.85rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.best-selling-design-area-mobile {
+    background-color: #040304;
+    padding: 4.5rem 0px;
+}
+
+.best-selling-design-area-mobile h1 {
+    color: var(--grey);
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+.best-selling-design-area-mobile h5 {
+    color: var(--lightGold);
+    font-size: 0.85rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.more-designs-mobile a {
+    text-decoration: none;
+    text-align: center;
+    color: #040304;
+    margin-top: 2rem;
+}
+
+.more-designs-mobile {
+    background-color: var(--primaryGold);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 0.8rem;
+    padding: 1rem 1rem;
+    width: 45%;
+    text-align: center;
+    margin: 0px auto;
+}
+
+.custom-design-area-mobile {
+    background-color: #121215;
+    padding: 4.5rem 0px;
+}
+
+.request-info-mobile {
+    margin-bottom: 2rem;
+}
+
+.request-info-mobile p {
+    font-size: 0.9rem;
+    color: #76777c;
+    line-height: 1.3rem;
+    text-align: center;
+    margin: -0.8rem 1.5rem;
+  }
+  
+  .request-info-mobile h1 {
+      font-weight: 800;
+      background: linear-gradient(to bottom, var(--primaryGold), var(--lightGold));
+      background-clip: text;
+      color: transparent;
+      font-size: 1.3rem;
+      text-align: center;
+  }
+
+  .request-info-mobile h5 {
+    color: var(--grey);
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 800;
+    margin-top: 0.5rem;
+}
+
+.request-order-mobile {
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.request-order-mobile input[type=submit] {
+    background-color: var(--primaryGold);
+    font-family: "Syne", sans-serif;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 50%;
+    color: #121215;
+    border: none;
+    padding: 1rem 3rem;
+    border-radius: 0.76rem;
+}
+
+.request-order-mobile input[type=text] {
+    width: 91%;
+    border-color: #434555;
+    border-width: 1px;
+    border-style: solid;
+    padding: 17px 20px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    border-radius: 1rem;
+    background: none;
+    color: var(--grey);
+    font-family: "Syne", sans-serif;
+}
+
+.how-it-works-mobile {
+    background-color: #040304;
+    padding: 4rem 0px;
+    border-top-color: #443411;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+
+
+.how-it-works-mobile h5 {
+    color: var(--lightGold);
+    font-size: 0.85rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: 2rem;
+}
+
+.how-it-works-mobile h1 {
+    background: linear-gradient(to bottom, var(--primaryGold), var(--lightGold));
+    background-clip: text;
+    color: transparent;
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+
+.step-box-mobile {
+    padding: 1rem;
+    background-color: #161414;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 1rem;
+    margin: 1.3rem 1rem;
+}
+
+.step-box-mobile img {
+    width: 10%;
+    height: 10%;
+}
+
+
+.step-details-mobile h3 {
+    color: var(--lightGold);
+    margin-top: 0px;
+    font-size: 1rem;
+}
+
+.step-details-mobile p {
+    text-align: left;
+    color: #52535b;
+    line-height: 1.2rem;
+    font-size: 0.89rem
+}
+
+.footer-div-mobile {
+    background-color: var(--darkBG);
+    padding: 3rem 0px;
+  }
+
+  .company-info-mobile {
+    padding: 0px 3rem 1rem;
+    text-align: center;
+    border-bottom-color: #1a1919;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+  }
+
+  .office-address-mobile {
+    padding: 3rem 3rem;
+    border-bottom-color: #1a1919;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    text-align: center;
+  }
+
+.contact-mobile {
+    margin-top: -1rem;
+  }
+
+  .office-address-mobile h1 {
+    color: #e19900;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .office-address-mobile h5 {
+    font-size: 0.9rem;
+    color: #52535c;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  .office-address-mobile ul {
+    list-style-type: none;
+    margin-left: -40px;
+    line-height: 35px;
+    margin-top: 25px;
+  }
+
+  .office-address-mobile li {
+    color: #848487;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .company-info-mobile img {
+    width: 50%;
+  }
+
+  .company-info-mobile h3 {
+    color: #848487;
+    font-size: 0.9rem;
+    font-weight: 400;
+    width: 80%;
+    margin: 1rem auto;
+    line-height: 22px;
+  }
+
+  .support-info-mobile h1 {
+    color: #e19900;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .support-info-mobile h3 {
+    color: var(--grey);
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .support-info-mobile h5 {
+    font-size: 0.9rem;
+    color: #848487;
+    margin-top: -10px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+
+  .support-info-mobile {
+    padding: 3rem 3rem;
+    border-bottom-color: #1a1919;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    text-align: center;
+  }
+
+  .contact-form-mobile input[type=submit] {
+    background-color: var(--primaryGold);
+    width: 200px;
+    font-family: "Syne", sans-serif;
+    font-weight: 800;
+    margin: 30px auto;
+    color: #111;
+}
+
+.contact-form-mobile textarea {
+    font-family: "Syne", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 20px;
+    height: 200px;
+    background: transparent;
+    border-radius: 10px;
+    border-color: #434555;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: 10px;
+    color: var(--grey);
+    width: 82%;
+    margin-left: 1rem;
+}
+
+.contact-form-mobile input {
+    font-weight: 600;
+    width: 83%;
+    border-color: #434555;
+    border-width: 1px;
+    border-style: solid;
+    padding: 17px 20px;
+    margin-bottom: 10px;
+    margin-left: 1rem;
+    margin-right: 4rem;
+    font-size: 16px;
+    border-radius: 10px;
+    background: none;
+    color: var(--grey);
+    font-family: "Syne", sans-serif;
+}
+
+.service-list-mobile {
+    border-top-color: #3f3622;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-bottom-color: #3f3622;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    padding: 3rem 0px;
+    text-align: center;
+}
+
+.counter-box-mobile {
+    text-align: center;
+}
+
+.inner-header-area-mobile {
+    background-color: #202023;
+    padding: 1rem 1rem;
+    margin-top: -2rem;
+  }
+
+
+  .best-selling-area-mobile {
+    background-color: #110f0f;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    padding: 1rem 0px;
+    border-color: #131111;
+    border-width: 1px;
+    border-style: solid;
+}
+
+
+.search-area-mobile input {
+    border-color: #434555;
+    border-width: 1px;
+    border-style: solid;
+    width: 92%;
+    background-color: transparent;
+    padding: 1rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #f8f8f8;
+    font-family: "Syne", sans-serif;
+    border-radius: 1rem;
+}
+
+.search-area-mobile {
+    margin: 2% auto;
+}
+
+  .browse-design-area-mobile {
+    background-color: #040304;
+    padding: 2rem 1rem;
+}
+
+.inner-header-title-mobile h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    background: linear-gradient(to bottom, var(--primaryGold), var(--lightGold));
+    background-clip: text;
+    color: transparent;
+  }
+
+.counter-box-mobile h1 {
+    background: linear-gradient(to bottom, var(--primaryGold), var(--lightGold));
+    background-clip: text;
+    color: transparent;
+    font-size: 5rem;
+    font-weight: 800;
+    margin-top: 1rem;
+  }
+
+
+  .rating-box-mobile h4 {
+    color: #dfe0e6;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 40px;
+    width: 100px;
+  }
+
+  .rating-box-mobile p {
+    color: var(--lightGold);
+    font-size: 1.15rem;
+    font-weight: 600;
+  }
+
+  .rating-box-mobile {
+    background-color: #1f1f23;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 3rem;
+    column-gap: 1rem;
+    margin-bottom: 0.85rem;
+  }
+
+.counter-box-mobile h5 {
+    background: linear-gradient(to bottom, var(--primaryGold), var(--lightGold));
+    background-clip: text;
+    color: transparent;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin-top: -2rem;
+}
+
+.service-count-area-mobile {
+    background-color: #121215;
+    padding: 2rem 1rem;
+}
+
+.service-list-mobile img {
+    width: 350px;
+    margin: 2rem auto;
+}
+
+.service-list-mobile h2 {
+    background: linear-gradient(to bottom, var(--primaryGold), var(--lightGold));
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    font-size: 1.65rem;
+    font-weight: 800;
+  }
+
+.service-list-mobile p {
+    color: #808080;
+    font-size: 0.94rem;
+    margin-top: 50px;
+    line-height: 1.3rem;
+    width: 83%;
+    text-align: center;
+    margin: 0px auto;
+  }
+
+.service-body-mobile {
+    padding: 2rem 0px;
+}
+.service-body-mobile h1 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  width: 70%;
+  margin: 0px auto;
+  color: #c5c5c5;
+  line-height: 2rem;
+}
+
+  .contact-form-mobile {
+padding: 1rem auto;
+margin-top: 2rem;
+}
+
+  .profile-body-mobile {
+    padding: 2rem 0px;
+  }
+
+  .profile-body-mobile h1 {
+    color: #c5c5c5;
+    font-size: 1.5rem;
+    width: 60%;
+    margin: 0px auto;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .profile-body-mobile h5 {
+    text-align: center;
+    font-weight: 700;
+    color: var(--lightGold);
+    font-size: 1rem;
+    width: 85%;
+    margin: 0px auto;
+  }
+
+  .footer-copyright-mobile {
+    font-size: 0.9rem;
+    width: 65%;
+    padding-top: 1rem;
+    margin: 0px auto;
+    text-align: center;
+    color: #848487;
+    font-weight: 400;
+  }
+
+  .inner-header-profile-mobile {
+    padding: 2rem 0px;
+    background-image: url("http://localhost/signaturecards/public/img/inner_bg.png");
+    border-bottom-color: #3f3622;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    margin-top: -16px;
+  }
+
+  .inner-header-profile-mobile h1 {
+    background: linear-gradient(to bottom, var(--primaryGold), var(--lightGold));
+    background-clip: text;
+    color: transparent;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+  }
