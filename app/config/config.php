@@ -5,6 +5,8 @@
     define('DB_PASS', ''); //Add your DB pass
     define('DB_NAME', 'SignatureCardsDB'); //Add your DB Name
 
+    define('Page_Limit', 9); //set Page Limit
+
     //APPROOT
     define('APPROOT', dirname(dirname(__FILE__)));
 

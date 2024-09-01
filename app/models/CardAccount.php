@@ -10,9 +10,42 @@
             return $guid = bin2hex(openssl_random_pseudo_bytes(16));
         } 
 
+        // function to load all cards
+        public function loadCardsPagination($page) {
+
+            $limit = Page_Limit;
+
+            // Calculate the start record
+            $start = ($page - 1) * $limit;
+
+            //Prepared statement
+            $this->db->query("SELECT COUNT(*)COUNT FROM SCD_Card_Products WHERE QUANTITY > 0 AND STATUS = 0");
+
+            $row = $this->db->single();
+            
+            $total_records = $row->COUNT;
+
+            // Calculate total pages
+            $total_pages = ceil($total_records / $limit);
+
+            //Prepared statement
+            $this->db->query("SELECT * FROM SCD_Card_Products WHERE QUANTITY > 0 AND STATUS = 0 LIMIT $start, $limit");
+        
+            $results = $this->db->resultSet();
+
+            $response = [
+                'results' => $results,
+                'total_pages' => $total_pages,
+            ];
+    
+            return $response;
+        }
+        // end of function
+
            
         //function to load user
         public function loadBestSellingCards() {
+
     
                 //Prepared statement
                 $this->db->query("SELECT * FROM SCD_Card_Products WHERE CATEGORY = 1 AND QUANTITY > 0 AND STATUS = 0 LIMIT 9;");
@@ -20,6 +53,35 @@
                 $results = $this->db->resultSet();
         
                 return $results;
+        }
+
+             //function to load user
+             public function loadFilterSearch($filter) {
+
+                if($filter == 'Regular') {
+                    $this->db->query("SELECT * FROM SCD_Card_Products WHERE CATEGORY = 1 AND QUANTITY > 0 AND STATUS = 0 LIMIT 9;");
+                }else{
+                    //Prepared statement
+                    $this->db->query("SELECT * FROM SCD_Card_Products WHERE CARD_TYPE = '".$filter."' AND QUANTITY > 0 AND STATUS = 0 LIMIT 9;");
+                }
+    
+          
+        
+                $results = $this->db->resultSet();
+
+                $data = '';
+
+                foreach($results as $card) {
+
+                    $data .= '<div class="card-product">
+                            <a href="'.URLROOT.'cards/orderCard?sku_id='.$card->CARD_ID.'">
+                                <img src="'.URLROOT.'/public/img/card_products/'.$card->CARD_IMAGE_NAME.'?v='.rand(10000000000,99999999999).'" />
+                                <h1>'.$card->CARD_NAME.'</h1>
+                            </a>
+                        </div>';
+                }
+        
+                return $data;
         }
 
             //function to load user

@@ -82,7 +82,6 @@ class Pages extends Controller {
              'exclusives' => $exclusives
          ];
 
-
         try {
 
             if($detect->isMobile()) {

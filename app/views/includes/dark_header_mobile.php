@@ -42,8 +42,8 @@
 <div class="header-area-mobile">
     <a href="http://localhost/signaturecards/pages/index2"><img class="animate__animated animate__fadeInLeft" src="<?php echo URLROOT; ?>/public/img/logo_updated.png" /></a>
     <div class="nav-area">
-                    <a class="cart" href="<?php echo URLROOT; ?>contactus">
-                        <span class="notify-badge-mobile">0</span>
+                    <a class="cart" href="<?php echo URLROOT; ?>cards/cart">
+                        <span id="cardItem" class="notify-badge-mobile"><?php if(isset($_SESSION['cartItem'])) { echo count($_SESSION['cartItem']);} else {echo '0';} ?></span>
                         <img src="<?php echo URLROOT; ?>/public/img/basket_gold.png" />
                     </a>
                     <a onclick="showMenu(); return false;" class="mobile-menu">

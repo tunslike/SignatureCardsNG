@@ -66,11 +66,29 @@
 <div class="best-selling-design-area">
     <div class="best-selling-design">
         <h1 class="homeElement best_seller animate__animated animate__zoomIn">Best Selling Designs</h1>
-        <h5 class="homeElement  animate__fadeInUp">Choose from our best selling custome designs</h5>
+        <h5 class="homeElement  animate__fadeInUp">Choose from our best selling premium designs</h5>
+    </div>
+<br>
+    <div class="filter-search-area">
+        <ul>
+            <li><a onclick="filterSearch('Luxury'); return false;" href="#">Luxury</a></li>
+            <li><a onclick="filterSearch('Rich'); return false;" href="#">Rich Vibes</a></li>
+            <li><a onclick="filterSearch('Sexy'); return false;" href="#">Sexy</a></li>
+            <li><a onclick="filterSearch('Personality'); return false;" href="#">Personality</a></li>
+            <li><a onclick="filterSearch('African'); return false;" href="#">African</a></li>
+            <li><a onclick="filterSearch('Animals'); return false;" href="#">Animals</a></li>
+            <li><a onclick="filterSearch('Abstract'); return false;" href="#">Abstract</a></li>
+            <li><a onclick="filterSearch('All'); return false;" href="#">All Designs</a></li>
+        </ul>
     </div>
 
+    <div style="display:none;" id="preloader" class="preloader-area">
+        <img src="<?php echo URLROOT; ?>/public/img/preloader.gif" />
+        <h5>Loading your search, please wait...</h5>
+    </div>
 
-    <div class="best-selling-area">
+    <div class="best-selling-box">
+    <div id="best_selling_data" class="best-selling-area">
 
     <?php if(count($data['cards']) > 0) : ?>
             
@@ -78,10 +96,10 @@
                 
                 <div class="card-product">
                     <a href="<?php echo URLROOT.'cards/orderCard?sku_id='.$card->CARD_ID ?>">
-                <img src="<?php echo URLROOT; ?>/public/img/card_products/<?php echo $card->CARD_IMAGE_NAME; ?>?v=<?php echo rand(10000000000,99999999999); ?>" />
-                <h1><?php echo $card->CARD_NAME; ?></h1>
-            </a>
-        </div>
+                        <img src="<?php echo URLROOT; ?>/public/img/card_products/<?php echo $card->CARD_IMAGE_NAME; ?>?v=<?php echo rand(10000000000,99999999999); ?>" />
+                        <h1><?php echo $card->CARD_NAME; ?></h1>
+                    </a>
+                </div>
             <?php endforeach; ?>
 
         <?php endif; ?>
@@ -143,8 +161,10 @@
         </div>
             -->
 
+    </div>
+
     <div class="more-designs">
-        <a href="#">Browse more Designs</a>
+        <a href="<?php echo URLROOT; ?>cards/designs">Browse more Designs</a>
     </div>
     </div>
 

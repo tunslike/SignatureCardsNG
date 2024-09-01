@@ -79,6 +79,23 @@ class Cards extends Controller {
     }
 
 
+    // function to filter card
+    public function loadFilterSearch() {
+
+        $filter = $_GET['filterSearch'];
+
+        if($filter == '') {
+            echo '';
+            exit();
+        }
+
+        $loadCards = $this->userModel->loadFilterSearch($filter);
+
+        echo $loadCards;
+    }
+    // end of function
+
+
     // card page
     public function card () {
 
@@ -110,7 +127,9 @@ class Cards extends Controller {
 
         // function to order card
         public function orderComplete() {
-            
+
+            $detect = new \Detection\MobileDetect;
+
             $skuid = '';
 
             if(isset($_GET['sku-'])) {
@@ -128,12 +147,29 @@ class Cards extends Controller {
                 'skuid' => $skuid
 
             ];
+
+            try {
+
+                if($detect->isMobile()) {
     
-            $this->view('cart/completeOrder', $data);
+                    $this->view('mobile/completeOrder', $data);
+    
+                }else{
+    
+                    //set table
+                    $this->view('cart/completeOrder', $data);
+                }
+    
+            }catch (Exception $e) {
+                var_dump($e);
+            }
+    
         }
 
       // function to order card
       public function orderCard() {
+
+        $detect = new \Detection\MobileDetect;
 
         if($_SERVER['REQUEST_METHOD'] == 'GET') {
             $sku_id = $_GET['sku_id'];
@@ -147,7 +183,21 @@ class Cards extends Controller {
             'cardDetails' => $cardDetails,
         ];
 
-        $this->view('cards/customiseCard', $data);
+        try {
+
+            if($detect->isMobile()) {
+
+                $this->view('mobile/customiseCard', $data);
+
+            }else{
+
+                //set table
+                $this->view('cards/customiseCard', $data);
+            }
+
+        }catch (Exception $e) {
+            var_dump($e);
+        }
     }
 
     //function to create customer order
@@ -219,6 +269,8 @@ class Cards extends Controller {
     // function to checkout an order
     public function checkout() {
 
+        $detect = new \Detection\MobileDetect;
+
         if(!isset($_SESSION['cartItem'])) {
             header("Location: " . URLROOT . "pages/index2");
             exit();
@@ -246,7 +298,21 @@ class Cards extends Controller {
             'shipping' => 2500
         ];
 
-        $this->view('cart/checkout', $data);
+        try {
+
+            if($detect->isMobile()) {
+
+                $this->view('mobile/checkout', $data);
+
+            }else{
+
+                //set table
+                $this->view('cart/checkout', $data);
+            }
+
+        }catch (Exception $e) {
+            var_dump($e);
+        }
 
     }
 
@@ -254,13 +320,21 @@ class Cards extends Controller {
 
         $detect = new \Detection\MobileDetect;
 
-        $loadCards = $this->userModel->loadBestSellingCards();
+        if(isset($_GET['pageid'])) {
+            $pageid = $_GET['pageid'];
+        }else {
+            $pageid = 1;
+        }
+
+        $cards = $this->userModel->loadCardsPagination($pageid);
 
         $data = [
             'page' => 'home',
             'active' => 'browse',
             'title' => 'Home page',
-            'cards' => $loadCards,
+            'cards' => $cards['results'],
+            'page_id' => $pageid,
+            'total_pages' => $cards['total_pages'],
         ];
 
         try {
@@ -302,6 +376,7 @@ class Cards extends Controller {
     //function to view cart
     public function cart() {
 
+        $detect = new \Detection\MobileDetect;
 
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -335,7 +410,23 @@ class Cards extends Controller {
             'cartItems' => $loadCart
         ];
 
-        $this->view('cart/cartItems', $data);
+
+        try {
+
+            if($detect->isMobile()) {
+
+                $this->view('mobile/cartItems', $data);
+
+            }else{
+
+                //set table
+                $this->view('cart/cartItems', $data);
+            }
+
+        }catch (Exception $e) {
+            var_dump($e);
+        }
+
     }
 
 }

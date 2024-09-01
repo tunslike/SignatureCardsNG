@@ -59,7 +59,7 @@
     </div>
 <br>
     <div class="more-designs-mobile">
-        <a href="#">Browse more Designs</a>
+        <a href="<?php echo URLROOT; ?>cards/designs">Browse more Designs</a>
     </div>
 </div>
 

@@ -119,6 +119,33 @@ function setProperties(type, value) {
     }
 }
 
+
+// function to filter search
+function filterSearch(value) {
+
+    //show preloader
+    $('#preloader').show()
+      
+    $.ajax({
+        type: "GET",
+        data: { filterSearch: value},
+        url: "http://localhost/signaturecards/cards/loadFilterSearch",
+        success: function (data) {
+
+            // hide 
+            $('#preloader').hide()
+
+            if(data == '') {
+
+            }else {
+                $('#best_selling_data').html(data)
+            }
+
+        },
+    });
+}
+//
+
 // function to add to cart
 function AddToCart() {
 
@@ -142,6 +169,8 @@ function AddToCart() {
         url: "http://localhost/signaturecards/cards/addCardSession",
         success: function (data) {
 
+            //alert(data)
+
             $('#cardItem').html(data)
             //alert('Item added to cart successfully!')
 
@@ -162,7 +191,7 @@ function changeImageBG(color) {
 
     let card_front_name = $('#card_front_name').val();
 
-    let format_card_front_name = card_front_name.replace('.jpg', '');
+    let format_card_front_name = card_front_name.replace('.png', '');
 
     if(color == 'black_gold') {
 
@@ -172,6 +201,8 @@ function changeImageBG(color) {
         $('#card_text_back').css('color', '#ccb043');
 
         let file_name = `http://localhost/signaturecards/public/img/card_products/${format_card_front_name}_3.jpg?v=${v_no}`;
+
+        //alert(file_name);
 
         $("#card_front").css({"background-image": "url(" + file_name + ")"});  
 
